@@ -50,6 +50,12 @@ public class SettingsActivity extends Activity {
          * TextView.
          *
          * On closing the activity, return the value in each text view to main activity.
+         * This will involve using an Intent and some Bundle
+         *
+         * ASSIGNMENT 2
+         * LEARN ABOUT EXPLICIT INTENT and IMPLICIT INTENTS
+         * -- Read a PDF file from assets and open in an intent.
+         * -- Open a web file from assets in an intent.
          *
          */
     }
