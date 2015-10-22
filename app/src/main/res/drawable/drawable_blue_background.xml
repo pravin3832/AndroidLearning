@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners
+        android:radius="8dp" />
+
+    <gradient
+        android:centerColor="#A1BCDF"
+        android:endColor="#375EAC"
+        android:startColor="#375EAC"
+        android:type="linear"
+        android:angle="90"/>
+
+    <!-- Watch for this padding in case you see some extra padding in UI -->
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+
+    <!-- We could have used a solid color instead of gradient -->
+    <!--<solid
+        android:color="color" />-->
+
+    <!-- Stroke is handy in making a border with a drawable
+        We shall do that an ASSIGNMENT -->
+    <!--<stroke
+        android:width="integer"
+        android:color="color"
+        android:dashWidth="integer"
+        android:dashGap="integer" />-->
+
+</shape>

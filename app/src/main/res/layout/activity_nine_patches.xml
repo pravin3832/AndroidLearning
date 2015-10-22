@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="learning.android.tenmarks.com.androidlearning.NinePatchesActivity">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_nine_patch_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch Nine Patch "
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_margin="10dp"
+        android:background="@drawable/my_nine_patch"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:id="@+id/button_nine_patch_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\n"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_margin="10dp"
+        android:background="@drawable/other_nice_patch"
+        android:layout_below="@id/button_nine_patch_one"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:id="@+id/button_nice_patch_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\nNine Patch Nine Patch Nine Patch.\n"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_orange_light"
+        android:layout_margin="10dp"
+        android:background="@drawable/arrow_nine_patch"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/button_nine_patch_one"/>
+
+</RelativeLayout>

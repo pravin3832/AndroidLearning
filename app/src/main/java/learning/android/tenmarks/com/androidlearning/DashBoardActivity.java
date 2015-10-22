@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.SoundEffectConstants;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -135,6 +136,33 @@ public class DashBoardActivity extends Activity {
             }
         });
 
+        // button_with_drawable
+        Button btnWithDrawable = (Button) findViewById(R.id.button_with_drawable);
+        btnWithDrawable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(DashBoardActivity.this, "You just clicked me :)", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        // button_with_image_selector_no_text
+        Button btnWithImageSelector = (Button) findViewById(R.id.button_with_image_selector_no_text);
+        btnWithImageSelector.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                v.playSoundEffect(SoundEffectConstants.CLICK);
+                Toast.makeText(DashBoardActivity.this, "Do you hear the click sound?", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // show me some nine patches now
+        Button btnNinePatch = (Button) findViewById(R.id.button_nine_patch);
+        btnNinePatch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DashBoardActivity.this, NinePatchesActivity.class));
+            }
+        });
     }
 
 
@@ -154,6 +182,9 @@ public class DashBoardActivity extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            // Launch settings intent from menu
+            Intent settingsIntent = new Intent(DashBoardActivity.this, SettingsActivity.class);
+            startActivity(settingsIntent);
             return true;
         }
 

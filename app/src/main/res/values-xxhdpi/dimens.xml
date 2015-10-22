@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="orange_button_width">144dp</dimen>
+    <dimen name="orange_button_height">144dp</dimen>
+</resources>
