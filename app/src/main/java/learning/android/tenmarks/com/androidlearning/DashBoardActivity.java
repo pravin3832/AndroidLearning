@@ -61,7 +61,6 @@ public class DashBoardActivity extends Activity {
         // on the above line findViewById returns a View, so you need to do an appropriate cast.
 
 
-
         // next you can use myTextView to modify its properties.
         myTextView.setText("Hello! I just started learning Android");
 
@@ -161,6 +160,14 @@ public class DashBoardActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(DashBoardActivity.this, NinePatchesActivity.class));
+            }
+        });
+
+        Button btnListView = (Button) findViewById(R.id.button_list_view);
+        btnListView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DashBoardActivity.this, MovieDbDiscoverActivity.class));
             }
         });
     }

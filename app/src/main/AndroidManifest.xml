@@ -16,6 +16,8 @@
         android:smallScreens="false"
         android:xlargeScreens="true" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -42,6 +44,14 @@
         <activity
             android:name=".NinePatchesActivity"
             android:label="@string/title_activity_nine_patches" >
+        </activity>
+        <activity
+            android:name=".ContactsListActivity"
+            android:label="@string/title_activity_nine_patches" >
+        </activity>
+        <activity
+            android:name=".MovieDbDiscoverActivity"
+            android:label="@string/title_activity_movie_db_discover" >
         </activity>
     </application>
 
