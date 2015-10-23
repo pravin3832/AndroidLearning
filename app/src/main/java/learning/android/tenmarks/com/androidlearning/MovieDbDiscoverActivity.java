@@ -2,8 +2,10 @@ package learning.android.tenmarks.com.androidlearning;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +20,8 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
 
 import java.util.List;
@@ -103,12 +107,22 @@ public class MovieDbDiscoverActivity extends Activity {
         List<DiscoverResponse.DiscoverResult> mItems;
         Context mContext;
         LayoutInflater mInflater;
+        ImageLoader imageLoader;
 
 
         public MoviesAdapter(Context context, List<DiscoverResponse.DiscoverResult> responseList) {
             mContext = context;
             mInflater = LayoutInflater.from(mContext);
             mItems = responseList;
+            imageLoader = new ImageLoader(Volley.newRequestQueue(mContext), new LruBitmapCache(getDefaultLruCacheSize()));
+        }
+
+        public int getDefaultLruCacheSize() {
+            final int maxMemory =
+                    (int) (Runtime.getRuntime().maxMemory() / 1024);
+            final int cacheSize = maxMemory / 8;
+
+            return cacheSize;
         }
 
         @Override
@@ -136,8 +150,11 @@ public class MovieDbDiscoverActivity extends Activity {
             }
 
             ViewHolder holder = (ViewHolder) convertView.getTag();
-            holder.tvTitle.setText(mItems.get(position).title);
+            int index = position + 1;
+            holder.tvTitle.setText(index + ". " + mItems.get(position).title);
             holder.tvOverview.setText(mItems.get(position).overview);
+            holder.imgThumb.setImageUrl("http://image.tmdb.org/t/p/w154" + mItems.get(position).backdrop_path, imageLoader);
+
             return convertView;
         }
 
@@ -147,10 +164,12 @@ public class MovieDbDiscoverActivity extends Activity {
 
         public TextView tvTitle;
         public TextView tvOverview;
+        public NetworkImageView imgThumb;
 
         public ViewHolder(View parent) {
             tvTitle = (TextView) parent.findViewById(R.id.title);
             tvOverview = (TextView) parent.findViewById(R.id.overview);
+            imgThumb = (NetworkImageView) parent.findViewById(R.id.imgThumb);
             parent.setTag(ViewHolder.this);
         }
     }
