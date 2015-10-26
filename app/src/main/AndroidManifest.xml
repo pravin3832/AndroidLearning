@@ -25,7 +25,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".DashBoardActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,6 +53,18 @@
         <activity
             android:name=".MovieDbDiscoverActivity"
             android:label="@string/title_activity_movie_db_discover" >
+        </activity>
+        <activity
+            android:name=".LearningFragmentsActivity"
+            android:label="@string/title_activity_learning_fragments" >
+        </activity>
+        <activity
+            android:name=".MultipleFragmentsActivity"
+            android:label="@string/title_activity_multiple_fragments" >
+        </activity>
+        <activity
+            android:name=".MultiPaneActivity"
+            android:label="@string/title_activity_multi_pane" >
         </activity>
     </application>
 
