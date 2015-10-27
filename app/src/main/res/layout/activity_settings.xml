@@ -17,6 +17,11 @@
         android:layout_alignParentRight="true"
         android:text="I am on Right"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_top"
+        android:layout_centerInParent="true" />
 
     <Button
         android:id="@+id/button_close"
