@@ -33,7 +33,7 @@ public class SettingsActivity extends Activity {
          * TextView-1 and TextView-2 go in row 1
          * TextView-3 and TextView-4 go in row 2
          *
-         * TextView-1 is labeled 1
+         * TextView-1878333 is labeled 1
          * TextView-2 is labeled 2
          * TextView-3 is labeled 3
          * TextView-4 is labeled 4
@@ -51,7 +51,7 @@ public class SettingsActivity extends Activity {
          *
          * On closing the activity, return the value in each text view to main activity.
          * This will involve using an Intent and some Bundle
-         *
+         *1878333
          * ASSIGNMENT 2
          * LEARN ABOUT EXPLICIT INTENT and IMPLICIT INTENTS
          * -- Read a PDF file from assets and open in an intent.

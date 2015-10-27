@@ -142,18 +142,23 @@ public class MovieDbDiscoverActivity extends Activity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-
-            if (convertView == null) {
+            //comment the convert view code and check how the performance is affected.
+            // the loading of data becomes slower.
+          /*  if (convertView == null) {
                 convertView = mInflater.inflate(
                         R.layout.row_movie_db, null);
                 new ViewHolder(convertView);
-            }
+            }*/
 
-            ViewHolder holder = (ViewHolder) convertView.getTag();
+            /*ViewHolder holder = (ViewHolder) convertView.getTag();
             int index = position + 1;
             holder.tvTitle.setText(index + ". " + mItems.get(position).title);
             holder.tvOverview.setText(mItems.get(position).overview);
-            holder.imgThumb.setImageUrl("http://image.tmdb.org/t/p/w154" + mItems.get(position).backdrop_path, imageLoader);
+            holder.imgThumb.setImageUrl("http://image.tmdb.org/t/p/w154" + mItems.get(position).backdrop_path, imageLoader);*/
+
+            TextView textView = (TextView) convertView.findViewById(R.id.title);
+            int index = position + 1;
+            textView.setText(index + ". " + mItems.get(position).title);
 
             return convertView;
         }
