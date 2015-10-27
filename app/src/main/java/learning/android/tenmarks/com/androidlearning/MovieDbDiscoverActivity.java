@@ -104,6 +104,5 @@ public class MovieDbDiscoverActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-
     // TODO I have moved the code of MoviesAdapter to a separate class to reuse, please take a look
 }

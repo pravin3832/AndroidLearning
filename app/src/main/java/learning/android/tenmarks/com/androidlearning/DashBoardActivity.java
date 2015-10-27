@@ -132,7 +132,8 @@ public class DashBoardActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent settingsIntent = new Intent(DashBoardActivity.this, SettingsActivity.class);
-                startActivity(settingsIntent);
+                settingsIntent.putExtra("titleSentFromDashBoard", "I made it dude!");
+                startActivityForResult(settingsIntent, 123);
             }
         });
 
@@ -225,5 +226,13 @@ public class DashBoardActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == 123) {
+            Toast.makeText(DashBoardActivity.this, data.getStringExtra("backToTheDashBoard"), Toast.LENGTH_SHORT).show();
+        }
     }
 }
