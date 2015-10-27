@@ -1,10 +1,12 @@
 package learning.android.tenmarks.com.androidlearning;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.audiofx.BassBoost;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * Created by Talha on 10/21/15.
@@ -20,11 +22,20 @@ public class SettingsActivity extends Activity {
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("return_value", "String returned from Settings");
+                setResult(1, returnIntent);
                 finish();
             }
         });
 
-
+        Bundle extras = getIntent().getExtras();
+        String text = "Top Button";
+        if (extras != null) {
+            text = extras.getString("random_string");
+        }
+        TextView topTextView =  (TextView) findViewById(R.id.text_view_top);
+        topTextView.setText(text);
         /**
          * ASSIGNMENT
          * Look at the XML file of this activity....You will find a relative layout.
