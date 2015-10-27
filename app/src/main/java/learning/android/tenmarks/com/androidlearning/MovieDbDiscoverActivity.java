@@ -83,6 +83,8 @@ public class MovieDbDiscoverActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+
+        // Just a menu inflater that we did earlier.
         getMenuInflater().inflate(R.menu.menu_movie_db_discover, menu);
         return true;
     }
@@ -102,80 +104,5 @@ public class MovieDbDiscoverActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    static class MoviesAdapter extends BaseAdapter {
-
-        List<DiscoverResponse.DiscoverResult> mItems;
-        Context mContext;
-        LayoutInflater mInflater;
-        ImageLoader imageLoader;
-
-
-        public MoviesAdapter(Context context, List<DiscoverResponse.DiscoverResult> responseList) {
-            mContext = context;
-            mInflater = LayoutInflater.from(mContext);
-            mItems = responseList;
-            imageLoader = new ImageLoader(Volley.newRequestQueue(mContext), new LruBitmapCache(getDefaultLruCacheSize()));
-        }
-
-        public int getDefaultLruCacheSize() {
-            final int maxMemory =
-                    (int) (Runtime.getRuntime().maxMemory() / 1024);
-            final int cacheSize = maxMemory / 8;
-
-            return cacheSize;
-        }
-
-        @Override
-        public int getCount() {
-            return (mItems != null) ? mItems.size() : 0;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return (mItems != null && position > -1 && position < mItems.size()) ? mItems.get(position) : null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;//should return ITEM UNIQUE ID, okay for now
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            //comment the convert view code and check how the performance is affected.
-            // the loading of data becomes slower.
-          /*  if (convertView == null) {
-                convertView = mInflater.inflate(
-                        R.layout.row_movie_db, null);
-                new ViewHolder(convertView);
-            }*/
-
-            /*ViewHolder holder = (ViewHolder) convertView.getTag();
-            int index = position + 1;
-            holder.tvTitle.setText(index + ". " + mItems.get(position).title);
-            holder.tvOverview.setText(mItems.get(position).overview);
-            holder.imgThumb.setImageUrl("http://image.tmdb.org/t/p/w154" + mItems.get(position).backdrop_path, imageLoader);*/
-
-            TextView textView = (TextView) convertView.findViewById(R.id.title);
-            int index = position + 1;
-            textView.setText(index + ". " + mItems.get(position).title);
-
-            return convertView;
-        }
-
-    }
-
-    private static class ViewHolder {
-
-        public TextView tvTitle;
-        public TextView tvOverview;
-        public NetworkImageView imgThumb;
-
-        public ViewHolder(View parent) {
-            tvTitle = (TextView) parent.findViewById(R.id.title);
-            tvOverview = (TextView) parent.findViewById(R.id.overview);
-            imgThumb = (NetworkImageView) parent.findViewById(R.id.imgThumb);
-            parent.setTag(ViewHolder.this);
-        }
-    }
+    // TODO I have moved the code of MoviesAdapter to a separate class to reuse, please take a look
 }

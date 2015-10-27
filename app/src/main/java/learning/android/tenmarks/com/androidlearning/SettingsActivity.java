@@ -1,10 +1,12 @@
 package learning.android.tenmarks.com.androidlearning;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.audiofx.BassBoost;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * Created by Talha on 10/21/15.
@@ -16,10 +18,22 @@ public class SettingsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        Bundle extras = getIntent().getExtras();
+        String titleFromDashBoard;
+
+        if (extras != null) {
+            titleFromDashBoard = extras.getString("titleSentFromDashBoard");
+            TextView textView = (TextView) findViewById(R.id.text_view_center);
+            textView.setText(titleFromDashBoard);
+        }
+
         Button closeButton = (Button) findViewById(R.id.button_close);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent dashboardIntent = new Intent();
+                dashboardIntent.putExtra("backToTheDashBoard", "I'm back!");
+                setResult(123, dashboardIntent);
                 finish();
             }
         });

@@ -49,6 +49,7 @@ public class DashBoardActivity extends Activity {
          *      being loaded and you can quickly navigate to the Activity Layout File.
          * ASSIGNMENT:
          * 1. Can you look for a shortcut to directly open the xml file of an activity?
+         *  Answer: Control + Command + Up Arrow (works for both java and xml files)
          * 2. Can you look if we can create a view in code and assign to activity rather than loading
          * from xml?
          */
@@ -131,7 +132,8 @@ public class DashBoardActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent settingsIntent = new Intent(DashBoardActivity.this, SettingsActivity.class);
-                startActivity(settingsIntent);
+                settingsIntent.putExtra("titleSentFromDashBoard", "I made it dude!");
+                startActivityForResult(settingsIntent, 123);
             }
         });
 
@@ -170,6 +172,34 @@ public class DashBoardActivity extends Activity {
                 startActivity(new Intent(DashBoardActivity.this, MovieDbDiscoverActivity.class));
             }
         });
+
+        Button btnFragmentOne = (Button) findViewById(R.id.button_fragment_activity_1);
+        btnFragmentOne.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DashBoardActivity.this, LearningFragmentsActivity.class));
+            }
+        });
+
+        Button btnFragmentTwo = (Button) findViewById(R.id.button_fragment_activity_2);
+        btnFragmentTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "Launching MultipleFragmentsActivity");
+                startActivity(new Intent(DashBoardActivity.this, MultipleFragmentsActivity.class));
+            }
+        });
+
+        Button btnFragmentThree = (Button) findViewById(R.id.button_fragment_activity_3);
+        btnFragmentThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "Launching Multiple Pane Fragment");
+                startActivity(new Intent(DashBoardActivity.this, MultiPaneActivity.class));
+            }
+        });
+
+
     }
 
 
@@ -196,5 +226,13 @@ public class DashBoardActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == 123) {
+            Toast.makeText(DashBoardActivity.this, data.getStringExtra("backToTheDashBoard"), Toast.LENGTH_SHORT).show();
+        }
     }
 }

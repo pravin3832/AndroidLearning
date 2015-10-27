@@ -35,7 +35,7 @@ public class DiscoverResponse {
     public static class DiscoverResult {
         public boolean adult;
         public String backdrop_path;
-        public int id;
+        public long id;
         public String original_language;
         public String original_title;
         public String overview;
