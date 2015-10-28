@@ -182,5 +182,67 @@
 
         </LinearLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_frag_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Fragment-A"
+                android:textColor="@color/app_white"
+                android:background="@drawable/drawable_bg_top_left_corner"
+                android:drawableLeft="@drawable/ic_smile_emoticon"
+                android:drawablePadding="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btn_frag_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Fragment-B"
+                android:textColor="@color/app_white"
+                android:background="@drawable/drawable_bg_top_right_corner"
+                android:drawableRight="@drawable/ic_smile_emoticon"
+                android:drawablePadding="10dp"
+                android:layout_toRightOf="@+id/btn_frag_1"
+                android:layout_alignParentTop="true"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btn_frag_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Fragment-C"
+                android:textColor="@color/app_white"
+                android:background="@drawable/drawable_bottom_left_corner"
+                android:drawableTop="@drawable/ic_smile_emoticon"
+                android:drawablePadding="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btn_frag_1"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btn_frag_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Fragment-D"
+                android:textColor="@color/app_white"
+                android:background="@drawable/drawable_bottom_right_corner"
+                android:drawableBottom="@drawable/ic_smile_emoticon"
+                android:drawablePadding="10dp"
+                android:layout_below="@+id/btn_frag_2"
+                android:layout_toRightOf="@+id/btn_frag_3"
+                android:padding="16dp"/>
+
+        </RelativeLayout>
+
     </LinearLayout>
 </ScrollView>

@@ -1,6 +1,7 @@
 package learning.android.tenmarks.com.androidlearning;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.audiofx.BassBoost;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,9 @@ public class SettingsActivity extends Activity {
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent toReturn = new Intent();
+                toReturn.putExtra("return_value", "Hey! this is a message from Settings Activity");
+                setResult(Activity.RESULT_OK, toReturn);
                 finish();
             }
         });

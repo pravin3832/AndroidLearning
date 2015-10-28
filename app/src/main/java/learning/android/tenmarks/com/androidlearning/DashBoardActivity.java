@@ -132,7 +132,8 @@ public class DashBoardActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent settingsIntent = new Intent(DashBoardActivity.this, SettingsActivity.class);
-                startActivity(settingsIntent);
+                // startActivity(settingsIntent);
+                startActivityForResult(settingsIntent, 123);
             }
         });
 
@@ -207,6 +208,14 @@ public class DashBoardActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_dash_board, menu);
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 123 && resultCode == Activity.RESULT_OK) {
+            Toast.makeText(DashBoardActivity.this, data.getStringExtra("return_value"), Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
