@@ -66,6 +66,10 @@
             android:name=".MultiPaneActivity"
             android:label="@string/title_activity_multi_pane" >
         </activity>
+        <activity
+            android:name=".LearningDialogFragmentsActivity"
+            android:label="@string/title_activity_learning_dialog_fragments" >
+        </activity>
     </application>
 
 </manifest>

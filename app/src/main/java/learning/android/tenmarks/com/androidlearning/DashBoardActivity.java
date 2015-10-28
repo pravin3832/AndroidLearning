@@ -30,9 +30,16 @@ import android.widget.Toast;
  * More you can read here: http://developer.android.com/reference/android/app/Activity.html
  *
  */
-public class DashBoardActivity extends Activity {
+
+// TODO notice that the Activity now implements the OnClickListener
+// TODO take a look at the onClick interface method - do you remember the shortcut to jump to a function?
+public class DashBoardActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG = "DashboardActivity";
+    private Button btnFragA;
+    private Button btnFragB;
+    private Button btnFragC;
+    private Button btnFragD;
 
     /**
      * This is where you set the content to display in the activity.
@@ -200,6 +207,20 @@ public class DashBoardActivity extends Activity {
         });
 
 
+        // @mtalha Oct 28, 2015
+        // TODO take a look at this initialization of views
+        btnFragA = (Button) findViewById(R.id.btn_frag_1);
+        btnFragB = (Button) findViewById(R.id.btn_frag_2);
+        btnFragC = (Button) findViewById(R.id.btn_frag_3);
+        btnFragD = (Button) findViewById(R.id.btn_frag_4);
+
+        // TODO I am adding this class as the click listener of these buttons.
+        btnFragA.setOnClickListener(this);
+        btnFragB.setOnClickListener(this);
+        btnFragC.setOnClickListener(this);
+        btnFragD.setOnClickListener(this);
+        // TODO for listener implementation see onClick method
+
     }
 
 
@@ -234,5 +255,16 @@ public class DashBoardActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.btn_frag_1
+                || v.getId() == R.id.btn_frag_2
+                || v.getId() == R.id.btn_frag_3
+                || v.getId() == R.id.btn_frag_4) {
+            Intent learnDialogFragmentIntent = new Intent(DashBoardActivity.this, LearningDialogFragmentsActivity.class);
+            startActivity(learnDialogFragmentIntent);
+        }
     }
 }
