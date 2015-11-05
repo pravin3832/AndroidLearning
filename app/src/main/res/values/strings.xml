@@ -13,4 +13,5 @@
     <string name="title_activity_multiple_fragments">Replacing and adding fragemets</string>
     <string name="title_activity_multi_pane">Activity With Multiple Panes</string>
     <string name="title_activity_learning_dialog_fragments">LearningDialogFragmentsActivity</string>
+    <string name="title_activity_load_data_from_db">LoadDataFromDbActivity</string>
 </resources>

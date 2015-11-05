@@ -3,8 +3,6 @@ package learning.android.tenmarks.com.androidlearning;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -62,7 +60,6 @@ public class DashBoardActivity extends Activity implements View.OnClickListener 
          */
 
         setContentView(R.layout.activity_dash_board);
-
 
         // After you set the contents of the activity, you can reference the individual widgets used
         TextView myTextView = (TextView) findViewById(R.id.my_text_view);
@@ -220,6 +217,17 @@ public class DashBoardActivity extends Activity implements View.OnClickListener 
         btnFragC.setOnClickListener(this);
         btnFragD.setOnClickListener(this);
         // TODO for listener implementation see onClick method
+
+
+        Button btnExploreSharedPreferences = (Button) findViewById(R.id.btn_data_storage);
+        btnExploreSharedPreferences.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sharedPreferencesIntent = new Intent();
+                sharedPreferencesIntent.setClass(DashBoardActivity.this, DataStorageActivity.class);
+                startActivity(sharedPreferencesIntent);
+            }
+        });
 
     }
 

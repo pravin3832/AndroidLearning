@@ -17,6 +17,17 @@
         android:xlargeScreens="true" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- The write_external_storage implicitly acquires read_external_storage -->
+
+
+    <!--
+     Take a look at the "uses-feature" thing, also look at the required attribute
+     Google Play will hide your app from devices, those don't have a camera
+    -->
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -69,6 +80,16 @@
         <activity
             android:name=".LearningDialogFragmentsActivity"
             android:label="@string/title_activity_learning_dialog_fragments" >
+        </activity>
+
+        <!-- Take a look at the windowSoftInputMode field -->
+        <activity
+            android:name=".DataStorageActivity"
+            android:label="Exploring Shared Preferences"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".LoadDataFromDbActivity"
+            android:label="@string/title_activity_load_data_from_db" >
         </activity>
     </application>
 

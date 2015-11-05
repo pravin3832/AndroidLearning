@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="textMultiLine"
+            android:text="Shared Preferences store private primitive data in key-value pairs.
+            \nData is persistent across application sessions, even if the app gets killed.
+            \nYou can clear the Shared Preferences Data by going in to device Settings-Application and Clear Data.
+            \n\nTo access Shared Preferences you call getSharedPreferences(NAME, MODE) or getPreferences()." />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/input_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter some text here"/>
+
+        <!-- Buttons for SharedPreferences -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Write to Preferences"/>
+
+            <Button
+                android:id="@+id/btn_read"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Read from Preferences"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="textMultiLine"
+            android:textColor="@android:color/holo_blue_light"
+            android:text="After you write something to shared preferences, close the app and come to this screen again.
+            \nTap on the read button, you should see your last saved data.
+            \n\n Also you can go to device settings and clear app data and then note the behavior. "/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:inputType="textMultiLine"
+            android:layout_margin="10dp"
+            android:text="You can write data to device external storage.
+            \n External storage is what we call WORLD_READABLE: other apps and users can read your data."/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+
+                <Button
+                    android:id="@+id/btn_save_external_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Write to External Storage"/>
+
+                <Button
+                    android:id="@+id/btn_read_external_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read from External Storage"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgExtDir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/infoText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:text="Information:"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_purple" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:inputType="textMultiLine"
+            android:layout_margin="10dp"
+            android:text="You can write data to device external storage.
+            \n External storage is what we call WORLD_READABLE: other apps and users can read your data."/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+
+                <Button
+                    android:id="@+id/btn_save_internal_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Write to Internal Storage"/>
+
+                <Button
+                    android:id="@+id/btn_read_internal_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read from Internal Storage"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgInternalStorage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/infoText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:text="Information:"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_orange_dark" />
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:hint="Enter Name"/>
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:hint="Enter Address"/>
+            
+            <Button
+                android:id="@+id/btnAddToDb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="Add"/>
+        </LinearLayout>
+        
+        
+        <Button
+            android:id="@+id/btnLoadDataFromDb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show data from Database"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+        
+    </LinearLayout>
+
+</ScrollView>
