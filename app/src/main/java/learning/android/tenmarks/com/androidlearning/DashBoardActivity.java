@@ -229,6 +229,8 @@ public class DashBoardActivity extends Activity implements View.OnClickListener 
             }
         });
 
+
+        findViewById(R.id.btn_user_dictionary).setOnClickListener(this);
     }
 
 
@@ -273,6 +275,10 @@ public class DashBoardActivity extends Activity implements View.OnClickListener 
                 || v.getId() == R.id.btn_frag_4) {
             Intent learnDialogFragmentIntent = new Intent(DashBoardActivity.this, LearningDialogFragmentsActivity.class);
             startActivity(learnDialogFragmentIntent);
+        } else if (v.getId() == R.id.btn_user_dictionary) {
+            Intent userDictionaryIntent = new Intent();
+            userDictionaryIntent.setClass(DashBoardActivity.this, UserDictionaryActivity.class);
+            startActivity(userDictionaryIntent);
         }
     }
 }

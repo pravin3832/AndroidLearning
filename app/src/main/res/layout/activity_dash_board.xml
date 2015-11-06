@@ -25,9 +25,18 @@
             android:background="@drawable/drawable_bg_top_left_corner"
             android:drawableLeft="@drawable/ic_smile_emoticon"
             android:drawablePadding="10dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:padding="16dp"/>
+
+        <Button
+            android:id="@+id/btn_user_dictionary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="18dp"
+            android:text="User Dictionary"
+            android:background="@drawable/drawable_bottom_right_corner"
+            android:drawableLeft="@drawable/ic_smile_emoticon"
+            android:drawablePadding="10dp"
+            android:padding="10dp"/>
 
         <TextView
             android:id="@+id/my_text_view"
