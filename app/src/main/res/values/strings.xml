@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidLearning</string>
+    <string name="app_name">Android Learning</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -14,4 +14,15 @@
     <string name="title_activity_multi_pane">Activity With Multiple Panes</string>
     <string name="title_activity_learning_dialog_fragments">LearningDialogFragmentsActivity</string>
     <string name="title_activity_load_data_from_db">LoadDataFromDbActivity</string>
+
+
+    <!-- TODO THINGS -->
+    <string name="no_todos">Currently there are no Todo items maintained</string>
+    <string name="menu_insert">Add Item</string>
+    <string name="menu_delete">Delete Todo</string>
+    <string name="todo_summary">Summary</string>
+    <string name="todo_description">Delete Todo</string>
+    <string name="todo_edit_summary">Summary</string>
+    <string name="todo_edit_description">Description</string>
+    <string name="todo_edit_confirm">Confirm</string>
 </resources>

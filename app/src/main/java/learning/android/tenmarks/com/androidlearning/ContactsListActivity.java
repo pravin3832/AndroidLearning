@@ -28,11 +28,6 @@ public class ContactsListActivity extends ListActivity implements LoaderManager.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        /**
-         * You can create a UI Widget in Java code, that needs a conext in constructor.
-         * But XML is more recommended since you can modify properties more easily.
-         */
         ProgressBar progressBar = new ProgressBar(this);
         progressBar.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         progressBar.setIndeterminate(true);

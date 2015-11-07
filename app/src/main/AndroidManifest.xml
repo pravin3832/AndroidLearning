@@ -95,6 +95,17 @@
         <activity android:name=".UserDictionaryActivity"
             android:label="User Dictionary Content Provider" />
 
+        <activity android:name=".TodosOverviewActivity"
+            android:label="ToDos Overview Activity" />
+
+        <activity android:name=".TodoDetailActivity"
+            android:label="ToDos Detail Activity"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        
+        <provider
+            android:name="learning.android.tenmarks.com.androidlearning.MyTodoContentProvider"
+            android:authorities="learning.android.tenmarks.com.androidlearning.contentprovider"
+            android:exported="true"/>
     </application>
 
 </manifest>
