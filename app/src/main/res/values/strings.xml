@@ -25,4 +25,14 @@
     <string name="todo_edit_summary">Summary</string>
     <string name="todo_edit_description">Description</string>
     <string name="todo_edit_confirm">Confirm</string>
+
+    <string name="explore_data_storage">Explore Data Storage</string>
+    <string name="user_dictionary">User Dictionary</string>
+    <string name="explore_content_provider">Explore Content Provider</string>
+
+    <string name="learning_android">Hello! I just started learning Android</string>
+    <string name="working_with_threads">Working with Threads</string>
+    <string name="title_activity_explore_threads">ExploreThreadsActivity</string>
+
+
 </resources>

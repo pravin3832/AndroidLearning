@@ -15,35 +15,61 @@
         android:layout_height="match_parent">
 
         <!-- Button to Launch SharedPreferences -->
-        <Button
-            android:id="@+id/btn_data_storage"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="24dp"
-            android:text="Explore Data Storage"
-            android:textColor="@color/app_white"
-            android:background="@drawable/drawable_bg_top_left_corner"
-            android:drawableLeft="@drawable/ic_smile_emoticon"
-            android:drawablePadding="10dp"
-            android:padding="16dp"/>
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btn_data_storage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="24dp"
+                android:text="@string/explore_data_storage"
+                android:textColor="@color/app_white"
+                android:background="@drawable/drawable_bg_top_left_corner"
+                android:drawableLeft="@drawable/ic_smile_emoticon"
+                android:drawablePadding="10dp"
+                android:padding="16dp"/>
+            
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1.0"/>
+
+            <Button
+                android:id="@+id/btn_threads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="24dp"
+                android:text="@string/working_with_threads"
+                android:textColor="@color/app_white"
+                android:background="@drawable/drawable_bg_top_right_corner"
+                android:drawableLeft="@drawable/ic_smile_emoticon"
+                android:drawablePadding="10dp"
+                android:padding="16dp"/>
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_user_dictionary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="18dp"
-            android:text="User Dictionary"
+            android:text="@string/user_dictionary"
             android:background="@drawable/drawable_bottom_right_corner"
             android:drawableLeft="@drawable/ic_smile_emoticon"
             android:drawablePadding="10dp"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:id="@+id/btn_content_provider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="18dp"
-            android:text="Explore Content Provider"
+            android:text="@string/explore_content_provider"
             android:background="@drawable/drawable_bg_top_right_corner"
             android:drawablePadding="10dp"
             android:padding="10dp"/>

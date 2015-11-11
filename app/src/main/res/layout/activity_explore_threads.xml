@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="learning.android.tenmarks.com.androidlearning.ExploreThreadsActivity">
+    
+    <Button
+        android:id="@+id/download_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:background="@drawable/drawable_bottom_left_corner"
+        android:text="Download Music"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/download_music" />
+    
+    
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/picture_frame"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/progress_bar"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_download_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_below="@id/image_view"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/drawable_blue_background"
+        android:text="Download Image on Worker Thread"/>
+
+    <Button
+        android:id="@+id/btn_download_image_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_below="@id/btn_download_image"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/drawable_bottom_left_corner"
+        android:text="Try me now to download image on Thread"
+        android:layout_marginTop="20dp"/>
+
+
+    <Button
+        android:id="@+id/btn_download_image_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_below="@id/btn_download_image_one"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/drawable_bottom_left_corner"
+        android:text="I will use a handler to set Bitmap on ImageView"
+        android:layout_marginTop="20dp"/>
+
+
+
+</RelativeLayout>

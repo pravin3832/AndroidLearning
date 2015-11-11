@@ -67,7 +67,7 @@ public class DashBoardActivity extends Activity implements View.OnClickListener 
 
 
         // next you can use myTextView to modify its properties.
-        myTextView.setText("Hello! I just started learning Android");
+        myTextView.setText(R.string.learning_android);
 
         // Let's refer to the other View inside out layout
         EditText myEditText = (EditText) findViewById(R.id.my_edit_text);
@@ -232,6 +232,7 @@ public class DashBoardActivity extends Activity implements View.OnClickListener 
 
         findViewById(R.id.btn_user_dictionary).setOnClickListener(this);
         findViewById(R.id.btn_content_provider).setOnClickListener(this);
+        findViewById(R.id.btn_threads).setOnClickListener(this);
     }
 
 
@@ -284,7 +285,8 @@ public class DashBoardActivity extends Activity implements View.OnClickListener 
             Intent contentProviderIntent = new Intent();
             contentProviderIntent.setClass(this, TodosOverviewActivity.class);
             startActivity(contentProviderIntent);
-
+        } else if (v.getId() == R.id.btn_threads) {
+            startActivity(new Intent(DashBoardActivity.this, ExploreThreadsActivity.class));
         }
     }
 }
