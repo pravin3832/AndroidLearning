@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">aprendizaje Android</string>
+
+    <string name="hello_world">Hola mundo!</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="title_activity_nine_patches">Nueve Parches Actividad</string>
+    <string name="title_activity_movie_db_discover">MovieDB Descubra Actividad</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="title_activity_fragment">Jugando con Fragmentos</string>
+    <string name="title_activity_learning_fragments">Jugando con fragmentos</string>
+    <string name="title_activity_multiple_fragments">Sustitución y añadiendo fragmentos</string>
+    <string name="title_activity_multi_pane">Actividad con múltiples Panes</string>
+    <string name="title_activity_learning_dialog_fragments">Aprendizaje de diálogo Fragmentos</string>
+    <string name="title_activity_load_data_from_db">Cargar datos FromDb Actividad</string>
+
+
+    <!-- TODO THINGS -->
+    <string name="no_todos">Actualmente no hay elementos TODO mantenidos</string>
+    <string name="menu_insert">Añadir artículo</string>
+    <string name="menu_delete">borrar Todo</string>
+    <string name="todo_summary">sumario</string>
+    <string name="todo_description">borrar Todo</string>
+    <string name="todo_edit_summary">sumario</string>
+    <string name="todo_edit_description">Descripción</string>
+    <string name="todo_edit_confirm">Confirmar</string>
+
+    <string name="explore_data_storage">Explora almacenamiento de datos</string>
+    <string name="user_dictionary">Diccionario del usuario</string>
+    <string name="explore_content_provider">Explora Proveedor de Contenido</string>
+
+    <string name="learning_android">¡Hola! Acabo de empezar a aprender Android</string>
+    <string name="working_with_threads">Trabajar con Hilos</string>
+
+</resources>
